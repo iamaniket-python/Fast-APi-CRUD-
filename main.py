@@ -14,3 +14,16 @@ students=[
 @app.get("/students")
 def get_students():
     return students
+
+@app.get("/student/{id}")
+def get_student_id(id:int):
+    for student in students:
+        if student.id == id:
+            return student
+    
+    return "Student Not Found"
+
+@app.post("/student")
+def add_student(student:Student):
+    students.append(student)
+    return student
