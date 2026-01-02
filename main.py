@@ -14,7 +14,7 @@ students=[
 @app.get("/students")
 def get_students():
     return students
-<<<<<<< HEAD
+
 
 @app.get("/student/{id}")
 def get_student_id(id:int):
@@ -28,5 +28,20 @@ def get_student_id(id:int):
 def add_student(student:Student):
     students.append(student)
     return student
-=======
->>>>>>> 05ce65ddeeb26737532c4cb946c9ef8011a5906f
+
+@app.put("/student")
+def update_student(id: int, student:Student):
+    for i in range(len(students)):
+        if students[i].id == id:
+            students[i]=student
+            return "Student Added"
+    return "No student found"
+
+@app.delete("/student")
+def delete_student(id:int):
+    for i in range(len(students)):
+        if students[i].id == id:
+            if students[i].id == id:
+                del students[i]
+                return "Student Deleted"
+    return " No student Found"
