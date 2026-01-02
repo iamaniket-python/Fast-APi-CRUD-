@@ -8,12 +8,13 @@ def welcome():
     return "Welcome"
 
 students=[
-    Student(roll_no =1, name="Aniket srivastava",student_class=2, age= 14, gender= "Male", phone= "123456789")
+    Student(roll_no =1, name="Aniket srivastava",student_class=11, age= 14, gender= "Male", phone= "123456789")
 ]
 
 @app.get("/students")
 def get_students():
     return students
+<<<<<<< HEAD
 
 @app.get("/student/{id}")
 def get_student_id(id:int):
@@ -27,3 +28,5 @@ def get_student_id(id:int):
 def add_student(student:Student):
     students.append(student)
     return student
+=======
+>>>>>>> 05ce65ddeeb26737532c4cb946c9ef8011a5906f
