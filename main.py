@@ -15,6 +15,7 @@ students=[
 @app.get("/students")
 def get_students():
     db= session()
+    
     return students
 
 
