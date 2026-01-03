@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from Database.models import Student
+from Database.confiq import session
 app =FastAPI()
 
 
@@ -13,6 +14,7 @@ students=[
 
 @app.get("/students")
 def get_students():
+    db= session()
     return students
 
 
