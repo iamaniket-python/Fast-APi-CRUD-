@@ -1,4 +1,4 @@
-📚 Student CRUD API – FastAPI
+📚  CRUD API – FastAPI
 
 A simple Student CRUD (Create, Read, Update, Delete) API built using FastAPI and Pydantic.
 This project is beginner-friendly and suitable for interviews and learning backend API development.
