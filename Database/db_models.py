@@ -3,9 +3,9 @@ from sqlalchemy import Column, Integer, String ,Float
 Base =declarative_base()
 
 class Student(Base):
-    roll_no= Column
-    name: str
-    student_class: int
-    age: int
-    gender: str
-    phone: str
+    roll_no= Column(Integer,primary_key=True,Index=True)
+    name = Column(String)
+    student_class =Column(Integer)
+    age= Column(Integer)
+    gender= Column(String)
+    phone = Column(String)
