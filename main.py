@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from Database.models import Student
-from Database.confiq import session
+from Database.confiq import session, engine
+from Database.models import db_models
 app =FastAPI()
+
+db_models .Base.metadata.create_all(bind=engine)
 
 
 @app.get("/")
